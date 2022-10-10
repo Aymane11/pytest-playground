@@ -59,4 +59,7 @@ jobs:
       if: steps.cache.outputs.cache-hit != 'true'
 
     - name: Run test suite
-      run: poetry run coverage run -m pytest && coverage report -m && coverage xml
+      run: >
+        poetry run coverage run -m pytest &&
+        poetry run coverage report -m &&
+        poetry run coverage xml
