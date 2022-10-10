@@ -1,7 +1,15 @@
 # pytest playground
 
-## Get coverage
+## Installation
+- Python 3.7+ :snake:
+- poetry :pen: _[(installation guide)](https://github.com/python-poetry/poetry#installation)_
 
-    pytest --cov=src --cov-report=term # coverage in terminal
-    pytest --cov=src --cov-report=xml # coverage in xml file
-    pytest --cov=src --cov-report=html # coverage in html file
+## Usage
+- Run the following command to install dependencies:
+
+    poetry install
+
+- Get coverage : `coverage run -m pytest && coverage report -m && coverage xml`
+- Fixtures are shown in the `conftest.py` and `test_fixture.py` files.
+- Mocking is shown in the `test_mock.py` file.
+- Exception handling is shown in the `test_exception.py` file.
